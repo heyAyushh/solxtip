@@ -4,23 +4,44 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4"
+    "@neondatabase/serverless": "^0.9.4",
+    "@prisma/adapter-neon": "^5.16.1",
+    "@prisma/client": "5.16.1",
+    "@solana/actions": "^1.1.1",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-phantom": "^0.9.24",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.94.0",
+    "@vercel/og": "^0.6.2",
+    "next": "14.2.4",
+    "next-auth": "^4.24.7",
+    "next-themes": "^0.3.0",
+    "posthog-js": "^1.144.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-github-btn": "^1.4.0",
+    "react-icons": "^5.2.1",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
+    "@types/node": "^20.14.10",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "@types/ws": "^8.5.10",
+    "eslint": "^9",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8.4.39",
+    "prisma": "^5.16.1",
+    "tailwindcss": "^3.4.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
   }
 }
