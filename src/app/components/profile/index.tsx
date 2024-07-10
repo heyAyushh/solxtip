@@ -81,8 +81,8 @@ export const ProfilePage: React.FC<{
       setError('');
     }
 
-    if (inputValue.length >= 43) {
-      setInputValue(inputValue.slice(0, 43));
+    if (inputValue.length >= 44) {
+      setInputValue(inputValue.slice(0, 44));
     }
   }, [inputValue, walletPublicKey, error]);
 
